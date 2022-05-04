@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+p {
+  line-height: 30px;
+  font-size: 16px;
+}
+
+h2 {
+  margin-bottom: 35px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: #eee;
+}
+
+footer {
+  background-color: #959c72;
+  bottom: 0;
+  width: 100%;
+}
+
+footer .container {
+  padding: 25px 0;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+footer a {
+  color: #000;
+}
+
+.logo {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.nav_links {
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
+}
+
+.nav_links li {
+  list-style: none;
+}
+
+.nav_links a {
+  color: #000;
+  text-decoration: none;
+}
+
+.navbar_toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.navbar_toggle div {
+  width: 25px;
+  height: 2px;
+  margin: 5px;
+  background-color: #000;
+  transition: all 0.3s ease;
+}
+
+.header {
+  background-image: url(images/oprah_winfrey.png);
+  background-repeat: no-repeat;
+  background-size: inherit;
+  background-position: top 28% right;
+  max-width: 100%;
+  height: auto;
+  padding: 130px 0;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: auto;
+  max-width: 1360px;
+  padding: 65px 0;
+}
+
+.header h1 {
+  width: 50%;
+}
+
+.about {
+  background-color: #959c72;
+}
+
+.about h2 {
+  color: #fff;
+  font-weight: bold;
+}
+
+.about p {
+  color: #fff;
+}
+
+.quote q {
+  box-shadow: inset 0 0 5px rgb(0 0 0 / 25%), inset 580px 0 200px #fff;
+  padding: 55px;
+  width: 75%;
+  border-radius: 25px;
+  text-align: center;
+  margin: auto;
+}
+
+@media screen and (max-width: 1025px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .container {
+    padding: 35px;
+  }
+
+  .nav_links {
+    padding: 150px;
+    position: absolute;
+    right: 0;
+    height: 92vh;
+    top: 8vh;
+    background-color: #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+
+  .nav_links li {
+    opacity: 0;
+  }
+
+  .navbar_toggle {
+    display: block;
+  }
+
+  footer {
+    padding: 0 25px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header h1 {
+    color: #fff;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.85);
+    width: 100%;
+  }
+}
+
+.nav_active {
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-4px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-4px, -6px);
+}
